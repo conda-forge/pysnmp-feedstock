@@ -18,12 +18,15 @@ network transports.
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/pysnmp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pysnmp-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pysnmp-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pysnmp-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pysnmp/badges/version.svg)](https://anaconda.org/conda-forge/pysnmp)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pysnmp/badges/downloads.svg)](https://anaconda.org/conda-forge/pysnmp)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pysnmp-green.svg)](https://anaconda.org/conda-forge/pysnmp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pysnmp.svg)](https://anaconda.org/conda-forge/pysnmp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pysnmp.svg)](https://anaconda.org/conda-forge/pysnmp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pysnmp.svg)](https://anaconda.org/conda-forge/pysnmp) |
 
 Installing pysnmp
 =================
