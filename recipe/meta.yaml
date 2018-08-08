@@ -1,8 +1,8 @@
 {% set name = "pysnmp" %}
-{% set version = "4.4.4" %}
+{% set version = "4.4.5" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "2f363106ad1518d9ef81c1f04b3764a77f9e5fac0303e3148ceb4261c9c6fcca" %}
+{% set hash_value = "489d1671e8f267bbbfb599b337fbff70ce202d5181143c5fe1cef077b1a8e8f2" %}
 
 package:
   name: {{ name|lower }}
@@ -16,12 +16,12 @@ source:
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - pyasn1 >=0.2.3
@@ -75,7 +75,8 @@ about:
   license: BSD-2-Clause
   license_url: http://pysnmp.sourceforge.net/license.html
   license_family: BSD
-  license_file: LICENSE.txt
+#  https://github.com/etingof/pysnmp/issues/184
+#  license_file: LICENSE.txt
   summary: SNMP library for Python
   description: |
     PySNMP is a cross-platform, pure-Python SNMP engine implementation. It
