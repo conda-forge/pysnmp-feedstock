@@ -1,4 +1,4 @@
-{% set version = "4.4.12" %}
+{% set version = "6.2.4" %}
 
 package:
   name: pysnmp
@@ -6,17 +6,17 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pysnmp/pysnmp-{{ version }}.tar.gz
-  sha256: 0c3dbef2f958caca96071fe5c19de43e9c1b0484ab02a0cf08b190bcee768ba9
+  sha256: 8b1346f561fdc53f13019c5ec2c108224b4935d5bb6d2c0133ca236bbae77665
   patches:
     - setuptools_version.patch
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
