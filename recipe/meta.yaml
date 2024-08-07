@@ -1,4 +1,4 @@
-{% set version = "4.4.12" %}
+{% set version = "6.2.4" %}
 
 package:
   name: pysnmp
@@ -6,25 +6,23 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pysnmp/pysnmp-{{ version }}.tar.gz
-  sha256: 0c3dbef2f958caca96071fe5c19de43e9c1b0484ab02a0cf08b190bcee768ba9
-  patches:
-    - setuptools_version.patch
+  sha256: 8b1346f561fdc53f13019c5ec2c108224b4935d5bb6d2c0133ca236bbae77665
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.8,<4.0
+    - poetry-core >=1.0.0
     - pip
   run:
-    - python
-    - pyasn1 >=0.2.3
-    - pysmi
-    - pycryptodomex
-    - twisted
+    - python >=3.8,<4.0
+    - pyasn1 >=0.4.8,!=0.5.0
+    - pysmi >=1.3.0,<2.0.0
+    - pysnmpcrypto >=0.0.4,<0.0.5
 
 test:
   imports:
@@ -32,21 +30,9 @@ test:
     - pysnmp.carrier
     - pysnmp.carrier.asyncio
     - pysnmp.carrier.asyncio.dgram
-    - pysnmp.carrier.asyncore
-    - pysnmp.carrier.asyncore.dgram
-    - pysnmp.carrier.asynsock
-    - pysnmp.carrier.asynsock.dgram
-    - pysnmp.carrier.twisted
-    - pysnmp.carrier.twisted.dgram
     - pysnmp.entity
     - pysnmp.entity.rfc3413
-    - pysnmp.entity.rfc3413.oneliner
-    - pysnmp.hlapi
     - pysnmp.hlapi.asyncio
-    - pysnmp.hlapi.asyncore
-    - pysnmp.hlapi.asyncore.sync
-    - pysnmp.hlapi.asyncore.sync.compat
-    - pysnmp.hlapi.twisted
     - pysnmp.proto
     - pysnmp.proto.acmod
     - pysnmp.proto.api
