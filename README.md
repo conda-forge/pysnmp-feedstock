@@ -3,15 +3,15 @@ About pysnmp-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pysnmp-feedstock/blob/main/LICENSE.txt)
 
-Home: http://snmplabs.com/pysnmp
+Home: https://www.pysnmp.com
 
 Package license: BSD-2-Clause
 
 Summary: SNMP library for Python
 
-Development: https://github.com/etingof/pysnmp
+Development: https://github.com/lextudio/pysnmp
 
-Documentation: http://pysnmp.sourceforge.net/docs/tutorial.html
+Documentation: https://docs.lextudio.com/pysnmp
 
 PySNMP is a cross-platform, pure-Python SNMP engine implementation. It
 features fully-functional SNMP engine capable to act in Agent/Manager/Proxy
