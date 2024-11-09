@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pysnmp/pysnmp-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pysnmp/pysnmp-{{ version }}.tar.gz
   sha256: 535b275e6703e37d5a65328ee32ece2d28c876482f83de781785b550b1f5cfe3
 
 build:
@@ -15,15 +15,17 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
     - pyasn1 >=0.4.8,!=0.5.0
     - pysmi >=1.3.0,<2.0.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pysnmp
     - pysnmp.carrier
