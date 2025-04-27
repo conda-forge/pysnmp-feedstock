@@ -1,4 +1,4 @@
-{% set version = "7.1.17" %}
+{% set version = "7.1.18" %}
 
 package:
   name: pysnmp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pysnmp/pysnmp-{{ version }}.tar.gz
-  sha256: a8663092a534d98af358587f77ea61339c4ffab2d4bbfe2a0cc6a77c2dbae886
+  sha256: c89f387bd071cf0efcc02b57afe92185bc0c53c1b9e70587b879f8a96bf51eb3
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core >=1.0.0
+    - flit-core >=3.9.0
     - pip
   run:
     - python >={{ python_min }},<4.0
