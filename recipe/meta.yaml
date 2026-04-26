@@ -1,4 +1,4 @@
-{% set version = "7.1.22" %}
+{% set version = "7.1.26" %}
 
 package:
   name: pysnmp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pysnmp/pysnmp-{{ version }}.tar.gz
-  sha256: 37ac595c7f0c1c00514505939b4dcf5b4fd5a9ffe51b0349f60bb640c11b0f77
+  sha256: d6d28a338221418b7e9c5caaed671a3d89182f9e691d5798949565380934c71a
 
 build:
   number: 0
