@@ -1,15 +1,15 @@
 schema_version: 1
 
 context:
-  version: "7.1.22"
+  version: 7.1.30
 
 package:
   name: pysnmp
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pysnmp/pysnmp-${{ version }}.tar.gz
-  sha256: 37ac595c7f0c1c00514505939b4dcf5b4fd5a9ffe51b0349f60bb640c11b0f77
+  url: https://github.com/lextudio/pysnmp/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: c0b605a6ba9af3c6a289eb985ae81b2291b5ff04d24835eb3796635c5b37d8ba
 
 build:
   number: 0
